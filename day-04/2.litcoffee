@@ -84,13 +84,16 @@ Count the number of valid passports - those that have all required fields and va
         @eyr = parseFloat @eyr
         @iyr = parseFloat @iyr
 
+      REQUIRED_KEYS: "ecl pid eyr hcl byr iyr hgt".split ' '
       valid: ->
-        for key in @required_keys()
+        for key in @REQUIRED_KEYS
           return false unless @["#{key}_valid"]?()
         true
 
-      required_keys: ->
-        "ecl pid eyr hcl byr iyr hgt".split ' '
+
+      ###
+        individual field validators
+      ###
 
       byr_valid: ->
         1920 <= @byr <= 2020
@@ -101,8 +104,9 @@ Count the number of valid passports - those that have all required fields and va
       eyr_valid: ->
         2020 <= @eyr <= 2030
 
+      HGT_PATTERN: /^(\d+)(cm|in)$/
       hgt_valid: ->
-        [_, num, unit] = @hgt?.match(/^(\d+)(cm|in)$/) or []
+        [_, num, unit] = @hgt?.match(@HGT_PATTERN) or []
 
         # gtfo if not match
         return false unless num and unit
@@ -117,27 +121,36 @@ Count the number of valid passports - those that have all required fields and va
           else
             false
 
+      HCL_PATTERN: /^#[0-9a-f]{6}$/
       hcl_valid: ->
-        /^#[0-9a-f]{6}$/.test @hcl
+        @HCL_PATTERN.test @hcl
 
       ecl_valid: ->
         @ecl in "amb blu brn gry grn hzl oth".split ' '
 
+      PID_PATTERN: /^\d{9}$/
       pid_valid: ->
-        /^\d{9}$/.test @pid
+        @PID_PATTERN.test @pid
 
       cid_valid: ->
+        # we can ignore this field
         true
 
+
+      ###
+        class methods
+      ###
+
+      @KV_PATTERN: /(\w{3}):(\S+)/g
       @parse: (str='')->
         obj = {}
-        str.match /(\w{3}):(\S+)/g
+        str.match @KV_PATTERN
         .map (kvs)->
           [key, val] = kvs.split ':'
           obj[key] = val
 
         {ecl, pid, eyr, hcl, byr, iyr, cid, hgt} = obj
-        new Passport ecl, pid, eyr, hcl, byr, iyr, cid, hgt
+        new @ ecl, pid, eyr, hcl, byr, iyr, cid, hgt
 
     parse_input = (text='')->
       text.split "\n\n"
@@ -148,6 +161,7 @@ Count the number of valid passports - those that have all required fields and va
         Passport.parse(str).valid()
       .filter (val)-> !!val
       .length
+
 
 ## Tests
 
@@ -163,4 +177,3 @@ Count the number of valid passports - those that have all required fields and va
     input = require './input'
 
     log num_valid input
-

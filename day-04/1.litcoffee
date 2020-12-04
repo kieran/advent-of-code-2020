@@ -55,17 +55,16 @@ Count the number of valid passports - those that have all required fields. Treat
     class Passport
       constructor: (@ecl, @pid, @eyr, @hcl, @byr, @iyr, @cid, @hgt)->
 
+      REQUIRED_KEYS: "ecl pid eyr hcl byr iyr hgt".split ' '
       valid: ->
-        for key in @required_keys()
+        for key in @REQUIRED_KEYS
           return false unless @[key]
         true
 
-      required_keys: ->
-        "ecl pid eyr hcl byr iyr hgt".split ' '
-
+      @KV_PATTERN: /(\w{3}):(\S+)/g
       @parse: (str='')->
         obj = {}
-        str.match /(\w{3}):(\S+)/g
+        str.match @KV_PATTERN
         .map (kvs)->
           [key, val] = kvs.split ':'
           obj[key] = val
