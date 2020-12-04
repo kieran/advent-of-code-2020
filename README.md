@@ -16,3 +16,13 @@ i/ *   O   O   * \i
 /=================\
        |___|
 ```
+
+## Quick Links
+
+| day | p1 | p2 | video |
+| --- | --- | --- | --- |
+| 1      | [1️⃣](day-01/1.litcoffee)         | [2️⃣](day-01/2.litcoffee)         |  |
+| 2      | [1️⃣](day-02/1.litcoffee)         | [2️⃣](day-02/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=YzN1TrF0-GE&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=1) |
+| 3      | [1️⃣](day-03/1.litcoffee)         | [2️⃣](day-03/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=AI1W-SE9-Fs&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=2) |
+| 4      | [1️⃣](day-04/1.litcoffee)         | [2️⃣](day-04/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=S2pMLNfAi00&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=3) |
+
