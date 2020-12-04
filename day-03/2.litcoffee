@@ -87,6 +87,4 @@ What do you get if you multiply together the number of trees encountered on each
 
 ## Run
 
-    input = require './input'
-
-    log productOfTreesHit slopes, treeMap input
+    log productOfTreesHit slopes, treeMap require './input'

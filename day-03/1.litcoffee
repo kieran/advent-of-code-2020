@@ -3,19 +3,19 @@ With the toboggan login problems resolved, you set off toward the airport. While
 
 Due to the local geology, trees in this area only grow on exact integer coordinates in a grid. You make a map (your puzzle input) of the open squares (.) and trees (#) you can see. For example:
 
-```plain
-..##.......
-#...#...#..
-.#....#..#.
-..#.#...#.#
-.#...##..#.
-..#.##.....
-.#.#.#....#
-.#........#
-#.##...#...
-#...##....#
-.#..#...#.#
-```
+    input = """
+      ..##.......
+      #...#...#..
+      .#....#..#.
+      ..#.#...#.#
+      .#...##..#.
+      ..#.##.....
+      .#.#.#....#
+      .#........#
+      #.##...#...
+      #...##....#
+      .#..#...#.#
+    """
 
 These aren't the only trees, though; due to something you read about once involving arboreal genetics and biome stability, the same pattern repeats to the right many times:
 
@@ -85,20 +85,6 @@ Starting at the top-left corner of your map and following a slope of right 3 and
 
 ## Tests
 
-    input = """
-      ..##.......
-      #...#...#..
-      .#....#..#.
-      ..#.#...#.#
-      .#...##..#.
-      ..#.##.....
-      .#.#.#....#
-      .#........#
-      #.##...#...
-      #...##....#
-      .#..#...#.#
-    """
-
     map = treeMap input
 
     assert not isTree 1, 3, map
@@ -112,6 +98,4 @@ Starting at the top-left corner of your map and following a slope of right 3 and
 
 ## Run
 
-    input = require './input'
-
-    log treesHit 1, 3, treeMap input
+    log treesHit 1, 3, treeMap require './input'

@@ -174,6 +174,4 @@ Count the number of valid passports - those that have all required fields and va
 
 ## Run
 
-    input = require './input'
-
-    log num_valid input
+    log num_valid require './input'

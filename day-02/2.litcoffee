@@ -8,18 +8,16 @@ Each policy actually describes two positions in the password, where 1 means the 
 
 Given the same example list from above:
 
-```plain
-1-3 a: abcde is valid: position 1 contains a and position 3 does not.
-1-3 b: cdefg is invalid: neither position 1 nor position 3 contains b.
-2-9 c: ccccccccc is invalid: both position 2 and position 9 contain c.
-```
+
+    input = """
+      1-3 a: abcde is valid: position 1 contains a and position 3 does not.
+      1-3 b: cdefg is invalid: neither position 1 nor position 3 contains b.
+      2-9 c: ccccccccc is invalid: both position 2 and position 9 contain c.
+    """
 
 How many passwords are valid according to the new interpretation of the policies?
 
 ## Defs
-
-    { log } = console
-    assert  = require 'assert'
 
     class Password
       constructor: (@min, @max, @char, @str)->
@@ -29,10 +27,11 @@ How many passwords are valid according to the new interpretation of the policies
       valid: ->
         @str[@min-1] is @char ^ @str[@max-1] is @char
 
+      @LINE_PATTERN: /(\d+)-(\d+)\s(\w):\s(\w+)/
       @parse: (line='')->
-        match = line.match /(\d+)-(\d+)\s(\w):\s(\w+)/
+        match = line.match @LINE_PATTERN
         [ _, min, max, char, str ] = match
-        new Password min, max, char, str
+        new @ min, max, char, str
 
     countValid = (text)->
       num = 0
@@ -42,20 +41,15 @@ How many passwords are valid according to the new interpretation of the policies
 
 ## Tests
 
-    input = """
-      1-3 a: abcde
-      1-3 b: cdefg
-      2-9 c: ccccccccc
-    """
+    { log } = console
+    assert  = require 'assert'
 
-    assert Password.parse('1-3 a: abcde').valid()
+    assert     Password.parse('1-3 a: abcde').valid()
     assert not Password.parse('1-3 b: cdefg').valid()
     assert not Password.parse('2-9 c: ccccccccc').valid()
 
-    assert.equal 1, countValid input
+    assert 1 is countValid input
 
 ## Run
 
-    input = require './input'
-
-    log countValid input
+    log countValid require './input'

@@ -23,7 +23,7 @@ Passport data is validated in batch files (your puzzle input). Each passport is 
 
 Here is an example batch file containing four passports:
 
-    example_input = """
+    input = """
       ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
       byr:1937 iyr:2017 cid:147 hgt:183cm
 
@@ -102,13 +102,11 @@ Count the number of valid passports - those that have all required fields. Treat
     assert not Passport.parse("hcl:#cfa07d eyr:2025 pid:166559648
       iyr:2011 ecl:brn hgt:59in").valid()
 
-    passport_strings = parse_input example_input
+    passport_strings = parse_input input
 
-    assert 2 is num_valid example_input
+    assert 2 is num_valid input
 
 
 ## Run
 
-    input = require './input'
-
-    log num_valid input
+    log num_valid require './input'
