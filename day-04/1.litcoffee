@@ -23,22 +23,21 @@ Passport data is validated in batch files (your puzzle input). Each passport is 
 
 Here is an example batch file containing four passports:
 
+    example_input = """
+      ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
+      byr:1937 iyr:2017 cid:147 hgt:183cm
 
-```plain
-ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
-byr:1937 iyr:2017 cid:147 hgt:183cm
+      iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884
+      hcl:#cfa07d byr:1929
 
-iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884
-hcl:#cfa07d byr:1929
+      hcl:#ae17e1 iyr:2013
+      eyr:2024
+      ecl:brn pid:760753108 byr:1931
+      hgt:179cm
 
-hcl:#ae17e1 iyr:2013
-eyr:2024
-ecl:brn pid:760753108 byr:1931
-hgt:179cm
-
-hcl:#cfa07d eyr:2025 pid:166559648
-iyr:2011 ecl:brn hgt:59in
-```
+      hcl:#cfa07d eyr:2025 pid:166559648
+      iyr:2011 ecl:brn hgt:59in
+    """
 
 The first passport is valid - all eight fields are present. The second passport is invalid - it is missing hgt (the Height field).
 
@@ -90,22 +89,6 @@ Count the number of valid passports - those that have all required fields. Treat
     { log } = console
     assert = require 'assert'
 
-    input = """
-      ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
-      byr:1937 iyr:2017 cid:147 hgt:183cm
-
-      iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884
-      hcl:#cfa07d byr:1929
-
-      hcl:#ae17e1 iyr:2013
-      eyr:2024
-      ecl:brn pid:760753108 byr:1931
-      hgt:179cm
-
-      hcl:#cfa07d eyr:2025 pid:166559648
-      iyr:2011 ecl:brn hgt:59in
-    """
-
     assert Passport.parse("ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
       byr:1937 iyr:2017 cid:147 hgt:183cm").valid()
 
@@ -120,9 +103,9 @@ Count the number of valid passports - those that have all required fields. Treat
     assert not Passport.parse("hcl:#cfa07d eyr:2025 pid:166559648
       iyr:2011 ecl:brn hgt:59in").valid()
 
-    passport_strings = parse_input input
+    passport_strings = parse_input example_input
 
-    assert 2 is num_valid input
+    assert 2 is num_valid example_input
 
 
 ## Run
