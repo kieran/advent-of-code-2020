@@ -125,8 +125,9 @@ Count the number of valid passports - those that have all required fields and va
       hcl_valid: ->
         @HCL_PATTERN.test @hcl
 
+      ECL_OPTIONS: "amb blu brn gry grn hzl oth".split ' '
       ecl_valid: ->
-        @ecl in "amb blu brn gry grn hzl oth".split ' '
+        @ecl in @ECL_OPTIONS
 
       PID_PATTERN: /^\d{9}$/
       pid_valid: ->
