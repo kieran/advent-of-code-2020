@@ -8,7 +8,7 @@ Due to some questionable network security, you realize you might be able to solv
 
 The automatic passport scanners are slow because they're having trouble detecting which passports have all required fields. The expected fields are as follows:
 
-```
+```plain
 byr (Birth Year)
 iyr (Issue Year)
 eyr (Expiration Year)
@@ -24,7 +24,7 @@ Passport data is validated in batch files (your puzzle input). Each passport is 
 Here is an example batch file containing four passports:
 
 
-```
+```plain
 ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
 byr:1937 iyr:2017 cid:147 hgt:183cm
 

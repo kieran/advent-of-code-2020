@@ -14,7 +14,7 @@ Specifically, they need you to find the two entries that sum to `2020` and then 
 
 For example, suppose your expense report contained the following:
 
-```
+```plain
 1721
 979
 366

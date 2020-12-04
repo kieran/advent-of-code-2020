@@ -4,7 +4,7 @@ The line is moving more quickly now, but you overhear airport security talking a
 
 You can continue to ignore the cid field, but each other field has strict rules about what values are valid for automatic validation:
 
-```
+```plain
 byr (Birth Year) - four digits; at least 1920 and at most 2002.
 iyr (Issue Year) - four digits; at least 2010 and at most 2020.
 eyr (Expiration Year) - four digits; at least 2020 and at most 2030.
@@ -19,7 +19,7 @@ cid (Country ID) - ignored, missing or not.
 
 Your job is to count the passports where all required fields are both present and valid according to the above rules. Here are some example values:
 
-```
+```plain
 byr valid:   2002
 byr invalid: 2003
 
@@ -41,7 +41,7 @@ pid invalid: 0123456789
 
 Here are some invalid passports:
 
-```
+```plain
 eyr:1972 cid:100
 hcl:#18171d ecl:amb hgt:170 pid:186cm iyr:2018 byr:1926
 

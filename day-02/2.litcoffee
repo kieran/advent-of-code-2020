@@ -8,7 +8,7 @@ Each policy actually describes two positions in the password, where 1 means the 
 
 Given the same example list from above:
 
-```
+```plain
 1-3 a: abcde is valid: position 1 contains a and position 3 does not.
 1-3 b: cdefg is invalid: neither position 1 nor position 3 contains b.
 2-9 c: ccccccccc is invalid: both position 2 and position 9 contain c.
