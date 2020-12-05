@@ -14,24 +14,23 @@ What is the ID of your seat?
 
     class Seat
       constructor: (address='')->
-        [ _, row, col] = address.match /^([FB]{7})([RL]{3})/
+        [ _, @rowAddr, @colAddr] = address.match /^([FB]{7})([RL]{3})/
 
-        @rowAddr  = row
-        @colAddr  = col
-
-      row: ->
-        row = @rowAddr
+      rowBin: ->
+        @rowAddr
           .replace /F/g, 0
           .replace /B/g, 1
 
-        parseInt row, 2
+      row: ->
+        parseInt @rowBin(), 2
 
-      col: ->
-        col = @colAddr
+      colBin: ->
+        @colAddr
           .replace /L/g, 0
           .replace /R/g, 1
 
-        parseInt col, 2
+      col: ->
+        parseInt @colBin(), 2
 
       seat: ->
         @row() * 8 + @col()
