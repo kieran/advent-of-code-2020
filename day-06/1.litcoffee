@@ -49,9 +49,7 @@ For each group, count the number of questions to which anyone answered "yes". Wh
 ## Defs
 
     countQs = (text='')->
-      set = new Set
-      set.add char for char in text.match /[a-z]/g
-      set.size
+      new Set(text.match /[a-z]/g).size
 
     sumQs = (text='')->
       text

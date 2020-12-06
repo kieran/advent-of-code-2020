@@ -38,7 +38,7 @@ For each group, count the number of questions to which everyone answered "yes". 
 
 ## Defs
 
-    _ = require 'underscore'
+    { intersection } = require 'underscore'
 
     countQs = (text='')->
       ret = text
@@ -46,7 +46,7 @@ For each group, count the number of questions to which everyone answered "yes". 
       .map (line)->
         line.split ''
 
-      _.intersection(...ret).length
+      intersection(...ret).length
 
     sumQs = (text='')->
       text
