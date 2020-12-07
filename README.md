@@ -27,3 +27,4 @@ i/ *   O   O   * \i
 | 4   | Passport Processing   | [1️⃣](day-04/1.litcoffee)         | [2️⃣](day-04/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=S2pMLNfAi00&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=3) |
 | 5   | Binary Boarding       | [1️⃣](day-05/1.litcoffee)         | [2️⃣](day-05/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=HY1XeCVkJgo&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=4) |
 | 6   | Custom Customs        | [1️⃣](day-06/1.litcoffee)         | [2️⃣](day-06/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=pWT80SXlcEo&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=5) |
+| 7   | Handy Haversacks      | [1️⃣](day-07/1.litcoffee)         | [2️⃣](day-07/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=xTIhqZgeg0s&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=6) |
