@@ -28,3 +28,4 @@ i/ *   O   O   * \i
 | 5   | Binary Boarding       | [1️⃣](day-05/1.litcoffee)         | [2️⃣](day-05/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=HY1XeCVkJgo&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=4) |
 | 6   | Custom Customs        | [1️⃣](day-06/1.litcoffee)         | [2️⃣](day-06/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=pWT80SXlcEo&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=5) |
 | 7   | Handy Haversacks      | [1️⃣](day-07/1.litcoffee)         | [2️⃣](day-07/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=xTIhqZgeg0s&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=6) |
+| 7   | Handheld Halting      | [1️⃣](day-08/1.litcoffee)         | [2️⃣](day-08/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=8F7JlfAyx-0&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=7) |
