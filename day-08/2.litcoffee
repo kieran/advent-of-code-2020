@@ -57,14 +57,15 @@ Fix the program so that it terminates normally by changing exactly one jmp (to n
 
         return val if val = run new_steps
 
+
     run = (steps=[], acc=0, step=0, seen=[])->
       steps = steps.split "\n" if typeof steps is 'string'
 
       while true
-        # we won!
+        # are we done?
         return acc if step is steps.length
 
-        # we broke!
+        # are we stuck in a loop?
         return false if step in seen
 
         # record it
@@ -76,22 +77,17 @@ Fix the program so that it terminates normally by changing exactly one jmp (to n
         # evaluate it
         switch ins
           when 'acc'
-            acc = acc += arg
+            acc += arg
             step += 1
           when 'jmp'
             step += arg
           else
             step += 1
 
-      return acc
 
     parseStep = (line='')->
-      [_, instr, arg ] = /^(\w{3})\s([+-]\d+)$/.exec line
-      [
-        instr
-        parseFloat arg
-      ]
-
+      [_, ins, arg ] = /^(\w{3})\s([+-]\d+)$/.exec line
+      [ ins, parseFloat arg ]
 
 ## Tests
 

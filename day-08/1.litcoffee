@@ -52,7 +52,10 @@ Run your copy of the boot code. Immediately before any instruction is executed a
     run = (steps=[], acc=0, step=0, seen=[])->
       steps = steps.split "\n" if typeof steps is 'string'
 
-      until step in seen
+      while true
+        # are we done?
+        return acc if step in seen
+
         # record it
         seen.push step
 
@@ -62,21 +65,17 @@ Run your copy of the boot code. Immediately before any instruction is executed a
         # evaluate it
         switch ins
           when 'acc'
-            acc = acc += arg
+            acc += arg
             step += 1
           when 'jmp'
             step += arg
           else
             step += 1
 
-      return acc
 
     parseStep = (line='')->
-      [_, instr, arg ] = /^(\w{3})\s([+-]\d+)$/.exec line
-      [
-        instr
-        parseFloat arg
-      ]
+      [_, ins, arg ] = /^(\w{3})\s([+-]\d+)$/.exec line
+      [ ins, parseFloat arg ]
 
 
 ## Tests
@@ -85,6 +84,7 @@ Run your copy of the boot code. Immediately before any instruction is executed a
     assert = require 'assert'
 
     assert 5 is run input
+
 
 ## Run
 
