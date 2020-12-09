@@ -62,16 +62,19 @@ What is the encryption weakness in your XMAS-encrypted list of numbers?
       while start < values.length
         for i in [1..(values.length-start)]
           window = values[start...(start+i)]
-          sum = window.reduce (memo=0, val)-> memo + val
+          total = sumArray window
 
           # did we find the target?
-          return window if sum is target
+          return window if total is target
 
           # did we surpass the target?
-          break if tot > target
+          break if total > target
 
         # let's try the next offset
         start += 1
+
+    sumArray = (array=[])-> array.reduce (memo=0, val)-> memo + val
+
 
 ## Tests
 
