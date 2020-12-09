@@ -68,7 +68,7 @@ What is the encryption weakness in your XMAS-encrypted list of numbers?
           return window if sum is target
 
           # did we surpass the target?
-          continue if sum > target
+          break if tot > target
 
         # let's try the next offset
         start += 1
