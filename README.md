@@ -31,3 +31,4 @@ i/ *   O   O   * \i
 | 8   | Handheld Halting      | [1️⃣](day-08/1.litcoffee)         | [2️⃣](day-08/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=8F7JlfAyx-0&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=7) |
 | 9   | Encoding Error        | [1️⃣](day-09/1.litcoffee)         | [2️⃣](day-09/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=JCTVCwH9bSQ&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=8) |
 | 10  | Adapter Array         | [1️⃣](day-10/1.litcoffee)         | [2️⃣](day-10/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=rPEz3X8NQgw&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=9) |
+| 11  | Seating System        | [1️⃣](day-11/1.litcoffee)         | [2️⃣](day-11/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=wYDHH5rmtiw&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=10) |
