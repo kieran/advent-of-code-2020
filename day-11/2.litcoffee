@@ -128,7 +128,7 @@ Given the new visibility method and the rule change for occupied seats becoming 
 
 ## Defs
 
-    { flatten } = require 'underscore'
+    { flatten, isEqual } = require 'underscore'
 
     parseInput = (text='')->
       text
@@ -179,33 +179,41 @@ Given the new visibility method and the rule change for occupied seats becoming 
 
     # run until stable, then return map
     run = (map=[])->
-      new_map = nextMap map
-      while JSON.stringify(new_map) isnt JSON.stringify(map)
+      until isEqual map, new_map = nextMap map
         map = new_map
-        new_map = nextMap map
-      new_map
+      map
 
     # how many *visible seats* are occupied
     # - empty seats also block your view of other seats
     numVisible = (y,x,map=[])->
       num = 0
-      for dy in [-1, 0, +1]
-        for dx in [-1, 0, +1]
+      for dy in [-1..1]
+        for dx in [-1..1]
+          # skip the cell we're looking from
           continue if dy is 0 and dx is 0
+
+          # start at the cell we're looking from
           search_y = y
           search_x = x
-          done = false
-          until done
+
+          loop
+            # move one cell away in this direction
             search_y += dy
             search_x += dx
+
+            # see what's there
             switch map[search_y]?[search_x]
-              when false      # seat visible, unoccupied
-                done = true
-              when undefined  # we see the wall
-                done = true
-              when true       # seat visible, occupied
+              when null
+                # we found a floor tile, keep looking
+                continue
+              when true
+                # we found an occupied seat, count it!
                 num += 1
-                done = true
+              when false
+                "seat is empty"
+              when undefined
+                "we're off the map"
+            break
       num
 
     numOccupiedSeats = (arr=[])->
