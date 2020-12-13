@@ -80,7 +80,7 @@ What is the earliest timestamp such that all of the listed bus IDs depart at off
         .split ','
         .map parseFloat
 
-      sortBy ([id, idx] for id, idx in ids when id), ([id, _])-> -id
+      ([id, idx] for id, idx in ids when id)
 
     # check every multiple of the first departure time
     # and see if it lines up with a second departure time
@@ -93,6 +93,9 @@ What is the earliest timestamp such that all of the listed bus IDs depart at off
     # given a list of departure times and window size,
     # iteratively find the common ones
     findCommonDeparture = (departures=[])->
+      # sort departures by largest window for efficiency
+      departures = sortBy departures, ([id, _])-> -id
+
       for [time, offset], idx in departures
         # skip the first one since we don't have anything to pair it with yet
         unless idx
