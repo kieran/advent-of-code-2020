@@ -70,6 +70,8 @@ What is the earliest timestamp such that all of the listed bus IDs depart at off
 
 ## Defs
 
+    { sortBy } = require 'underscore'
+
     parseInput = (text='')->
       [ now, schedule ] = text.split "\n"
 
@@ -78,13 +80,13 @@ What is the earliest timestamp such that all of the listed bus IDs depart at off
         .split ','
         .map parseFloat
 
-      ([id, idx] for id, idx in ids when id)
+      sortBy ([id, idx] for id, idx in ids when id), ([id, _])-> -id
 
     # check every multiple of the first departure time
     # and see if it lines up with a second departure time
     # and if so, return the new combined window size and departure time
     firstCommonDeparture = ([window_size_1, offset_1], [window_size_2, offset_2], step=1)->
-      step+=1 while (n = offset_1 + window_size_1 * step) % window_size_2 isnt (offset_2 + window_size_2) % window_size_2
+      step += 1 while (n = offset_1 + window_size_1 * step) % window_size_2 isnt (offset_2 + window_size_2) % window_size_2
       [window_size_1*window_size_2, n]
 
 
