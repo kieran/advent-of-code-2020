@@ -21,7 +21,7 @@ i/ *   O   O   * \i
 
 | day | title | p1 | p2 | video |
 | --- | --- | --- | --- | --- |
-| 1   | Report Repair   | [1️⃣](day-01/1.litcoffee)         | [2️⃣](day-01/2.litcoffee)         |  |
+| 1   | Report Repair             | [1️⃣](day-01/1.litcoffee)         | [2️⃣](day-01/2.litcoffee)         |  |
 | 2   | Password Philosophy       | [1️⃣](day-02/1.litcoffee)         | [2️⃣](day-02/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=YzN1TrF0-GE&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=1) |
 | 3   | Toboggan Trajectory       | [1️⃣](day-03/1.litcoffee)         | [2️⃣](day-03/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=AI1W-SE9-Fs&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=2) |
 | 4   | Passport Processing       | [1️⃣](day-04/1.litcoffee)         | [2️⃣](day-04/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=S2pMLNfAi00&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=3) |
@@ -37,3 +37,4 @@ i/ *   O   O   * \i
 | 14  | Docking Data              | [1️⃣](day-14/1.litcoffee)         | [2️⃣](day-14/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=Rz7VMSRo-2Y&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=13) |
 | 15  | Rambunctious Recitation   | [1️⃣](day-15/1.litcoffee)         | [2️⃣](day-15/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=WCZg7TA6FhE&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=14) |
 | 16  | Ticket Translation        | [1️⃣](day-16/1.litcoffee)         | [2️⃣](day-16/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=o-joqAaVE7w&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=15) |
+| 17  | Conway Cubes              | [1️⃣](day-17/1.litcoffee)         | [2️⃣](day-17/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=wiCuhcxI27g&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=16) |
