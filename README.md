@@ -36,3 +36,4 @@ i/ *   O   O   * \i
 | 13  | Shuttle Search            | [1️⃣](day-13/1.litcoffee)         | [2️⃣](day-13/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=tp1YMGdi8oo&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=12) |
 | 14  | Docking Data              | [1️⃣](day-14/1.litcoffee)         | [2️⃣](day-14/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=Rz7VMSRo-2Y&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=13) |
 | 15  | Rambunctious Recitation   | [1️⃣](day-15/1.litcoffee)         | [2️⃣](day-15/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=WCZg7TA6FhE&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=14) |
+| 16  | Ticket Translation        | [1️⃣](day-16/1.litcoffee)         | [2️⃣](day-16/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=o-joqAaVE7w&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=15) |
