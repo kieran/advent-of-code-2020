@@ -155,12 +155,6 @@ Starting with your given initial configuration, simulate six cycles. How many cu
 
 ## Defs
 
-```plain
-.#.
-..#
-###
-```
-
     parseInput = (text='', iterations=6)->
       # parsing the input map
       arr = text
@@ -172,7 +166,7 @@ Starting with your given initial configuration, simulate six cycles. How many cu
           val is '#'
 
       # figuring out how big to make the board
-      target_size = arr.length + 2 * iterations
+      target_size = iterations + arr.length + 2 * iterations
       offset = Math.floor target_size / 2
 
       # making the blank board
@@ -196,12 +190,8 @@ Starting with your given initial configuration, simulate six cycles. How many cu
             z[idx][r_idx][v_idx] = false
       z
 
-    print_layer = (layer=0, board=[])->
-      'lol'
-
     cycle = (board=[])->
-      # new_board = JSON.parse JSON.stringify board
-      new_board = blank_board board.length
+      next_board = blank_board board.length
       for z, z_idx in board
         for y, y_idx in z
           for x, x_idx in y
@@ -209,17 +199,19 @@ Starting with your given initial configuration, simulate six cycles. How many cu
             for z_offset in [-1..1]
               for y_offset in [-1..1]
                 for x_offset in [-1..1]
-                  continue if z_idx is y_idx is x_idx is 0
-                  active_neighbours += 1 if board[z_idx+z_offset]?[y_idx+y_offset]?[x_idx+x_offset]
+                  unless z_offset is y_offset is x_offset is 0
+                    if board[z_idx+z_offset]?[y_idx+y_offset]?[x_idx+x_offset]
+                      active_neighbours += 1
+            # apply the rules
             if x and active_neighbours in [2,3]
-                new_board[z_idx][y_idx][x_idx] = true
-            else if not x and active_neighbours is 3
-              new_board[z_idx][y_idx][x_idx] = true
-      new_board
+              next_board[z_idx][y_idx][x_idx] = true
+            if not x and active_neighbours is 3
+              next_board[z_idx][y_idx][x_idx] = true
+      # return the next board
+      next_board
 
     cycles = (num=1, board=[])->
-      for i in [0...num]
-        board = cycle board
+      board = cycle board for i in [0...num]
       board
 
     num_active = (board=[])->
@@ -231,32 +223,16 @@ Starting with your given initial configuration, simulate six cycles. How many cu
       active
 
 
-
-If a cube is active and exactly 2 or 3 of its neighbors are also active, the cube remains active. Otherwise, the cube becomes inactive.
-If a cube is inactive but exactly 3 of its neighbors are active, the cube becomes active. Otherwise, the cube remains inactive.
-
-
-
 ## Tests
 
     { log } = console
     assert = require 'assert'
 
-    board = parseInput input
-    # assert 11 is num_active cycles 1, board
-    # assert 21 is num_active cycles 2, board
-    log num_active cycles 1, board
-    log num_active cycles 2, board
-    log num_active cycles 3, board
-    log num_active cycles 4, board
-    log num_active cycles 5, board
-    log num_active cycles 6, board
-    # assert 71 is num_active cycles 6, board
-
-
-
-
+    assert 11 is num_active cycles 1, parseInput input
+    assert 21 is num_active cycles 2, parseInput input
+    assert 112 is num_active cycles 6, parseInput input
 
 
 ## Run
 
+    log num_active cycles 6, parseInput require './input'
