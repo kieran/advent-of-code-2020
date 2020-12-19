@@ -38,3 +38,4 @@ i/ *   O   O   * \i
 | 15  | Rambunctious Recitation   | [1️⃣](day-15/1.litcoffee)         | [2️⃣](day-15/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=WCZg7TA6FhE&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=14) |
 | 16  | Ticket Translation        | [1️⃣](day-16/1.litcoffee)         | [2️⃣](day-16/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=o-joqAaVE7w&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=15) |
 | 17  | Conway Cubes              | [1️⃣](day-17/1.litcoffee)         | [2️⃣](day-17/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=wiCuhcxI27g&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=16) |
+| 18  | Operation Order           | [1️⃣](day-18/1.litcoffee)         | [2️⃣](day-18/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=mv6ZhuFVxRU&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w&index=17) |
