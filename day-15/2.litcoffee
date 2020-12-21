@@ -1,4 +1,5 @@
-# Part Two ---
+# Part Two
+
 Impressed, the Elves issue you a challenge: determine the 30000000th number spoken. For example, given the same starting numbers as above:
 
 ```plain
