@@ -41,3 +41,4 @@ i/ *   O   O   * \i
 | 18  | Operation Order           | [1️⃣](day-18/1.litcoffee)         | [2️⃣](day-18/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=mv6ZhuFVxRU&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w) |
 | 19  | Monster Messages          | [1️⃣](day-19/1.litcoffee)         | [2️⃣](day-19/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=XBBaZBwXPIc&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w) |
 | 20  | Jurassic Jigsaw           | [1️⃣](day-20/1.litcoffee)         | [2️⃣](day-20/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=8qm0S8xUoV8&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w) |
+| 21  | Allergen Assessment       | [1️⃣](day-21/1.litcoffee)         | [2️⃣](day-21/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=dQ5wQqZF_HQ&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w) |
