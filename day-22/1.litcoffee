@@ -124,7 +124,7 @@ Play the small crab in a game of Combat using the two decks you just dealt. What
         cards.map parseFloat
 
     playGame = ([d1, d2])->
-      until 0 is d1.length or 0 is d2.length
+      while d1.length and d2.length
         card1 = d1.shift()
         card2 = d2.shift()
         if card1 > card2
@@ -134,12 +134,10 @@ Play the small crab in a game of Combat using the two decks you just dealt. What
 
       [d1, d2]
 
-    scoreDeck = (decks=[])->
-      ret = 0
-      for deck in decks
-        for card, idx in deck.reverse()
-          ret += (idx + 1) * card
-      ret
+    scoreDeck = ([d1,d2], total=0)->
+      for card, idx in cards = [ d1..., d2... ]
+        total += (cards.length - idx) * card
+      total
 
 ## Tests
 

@@ -326,12 +326,11 @@ Defend your honor as Raft Captain by playing the small crab in a game of Recursi
 
       [d1, d2]
 
-    scoreDeck = (decks=[])->
-      ret = 0
+    scoreDeck = (decks=[], total=0)->
       for deck in decks
         for card, idx in deck.reverse()
-          ret += (idx + 1) * card
-      ret
+          total += (idx + 1) * card
+      total
 
 ## Tests
 
