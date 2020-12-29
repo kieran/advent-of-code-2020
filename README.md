@@ -45,3 +45,4 @@ i/ *   O   O   * \i
 | 22  | Crab Combat               | [1️⃣](day-22/1.litcoffee)         | [2️⃣](day-22/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=P5YoxHjph9M&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w) |
 | 23  | Crab Cups                 | [1️⃣](day-23/1.litcoffee)         | [2️⃣](day-23/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=ILtmDc98Yx0&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w) |
 | 24  | Lobby Layout              | [1️⃣](day-24/1.litcoffee)         | [2️⃣](day-24/2.litcoffee)         | [📺](https://www.youtube.com/watch?v=DNgQvMmUGiI&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w) |
+| 25  | Combo Breaker             | [1️⃣](day-25/1.litcoffee)         |                                 | [📺](https://www.youtube.com/watch?v=4v1CifPQz2E&list=PLeH-7TaE9WQd0nskfL8DK4Cc2T0GJDH_w) |
